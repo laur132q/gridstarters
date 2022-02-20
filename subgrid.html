@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Css Grid</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "main main main main"
+          "footer footer footer footer";
+      }
+
+      .item {
+        border: 1px solid #f00;
+      }
+
+      .item-a {
+        grid-area: header;
+        background-color: rgb(46, 34, 128);
+      }
+
+      .item-b {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        background-color: chartreuse;
+      }
+
+      .item-d {
+        grid-area: footer;
+        background-color: aqua;
+      }
+
+      article {
+        border: 1px solid #333;
+        background-color: aliceblue;
+        height: 80px;
+        width: 90px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 768px) {
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="item item-a">A</div>
+      <div class="item item-b">
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+      </div>
+      <div class="item item-d">C</div>
+    </main>
+  </body>
+</html>

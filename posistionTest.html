@@ -5,12 +5,19 @@
     <title>Lag på lag</title>
     <style>
       figure {
-      }
-      img,
-      figcaption {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
 
+      img,
       figcaption {
+        place-self: center;
+        grid-area: 1 / 1;
+      }
+
+      figcaption h2 {
+        color: crimson;
+        border: solid;
       }
       img {
       }
@@ -19,7 +26,7 @@
   <body>
     <figure>
       <img src="kagemand.png" alt="" />
-      <figcaption>Kagemand og kone</figcaption>
+      <figcaption><h2>Kagemand og kone</h2></figcaption>
     </figure>
   </body>
 </html>
